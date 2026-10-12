@@ -62,7 +62,7 @@ h3{font-size:19px;margin:0 0 8px;letter-spacing:-.01em}
 .step .n{position:absolute;top:22px;left:26px;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#03211C;font-weight:700;display:grid;place-items:center;font-size:15px}
 .flow{margin:0 0 36px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
 .flow svg{width:100%;height:auto;display:block}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;align-items:start}
+.gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start}
 .gallery figure{margin:0}
 .gallery img{border-radius:14px;border:1px solid var(--line)}
 .gallery figcaption{color:var(--muted);font-size:14px;margin-top:10px}
@@ -117,7 +117,7 @@ footer .disc{max-width:60em;margin-top:22px;font-size:13px;line-height:1.6}
  .hero .wrap{grid-template-columns:1fr}
  .grid3,.exp{grid-template-columns:1fr 1fr}
  .gallery{grid-template-columns:1fr 1fr}
- .gallery .tvcol{grid-column:1/-1}
+ .gallery .tvcol{grid-column:auto}
  nav.links a:not(.btn){display:none}
 }
 @media (max-width:600px){
@@ -154,8 +154,8 @@ footer .disc{max-width:60em;margin-top:22px;font-size:13px;line-height:1.6}
   <ul class="trust"><li>No accounts</li><li>No ads</li><li>No VPN server</li><li>Free to try</li></ul>
  </div>
  <div class="shots">
-  <img class="tv" src="img/tv-connected.webp" width="1280" height="720" alt="Flowshare on a TV, showing Connected to your phone by Wi-Fi Direct with Automatic mode selected">
-  <img class="phone" src="img/phone-sharing.webp" width="520" height="1127" alt="Flowshare on a phone, waiting for the TV with Automatic mode and an 8-digit code for the TV" loading="lazy">
+  <img class="tv" src="img/hero.webp" width="1280" height="720" alt="Flowshare on a Windows PC and on a second Android phone, both online through the sharing phone">
+  <img class="phone" src="img/phone-sharing.webp" width="520" height="1127" alt="Flowshare on the sharing phone, with Automatic mode and a pairing code" loading="lazy">
  </div>
 </div></section>
 
@@ -215,14 +215,14 @@ footer .disc{max-width:60em;margin-top:22px;font-size:13px;line-height:1.6}
 
 <section class="alt" aria-labelledby="screens-h"><div class="wrap">
  <span class="eyebrow">Screens</span>
- <h2 id="screens-h">Simple on the TV. Clear on the phone.</h2>
- <p class="sub">Big, readable status on the TV for the remote, and everything you need on the phone.</p>
+ <h2 id="screens-h">Clear on every screen.</h2>
+ <p class="sub">Share from your phone; get online on a second phone, a tablet, a Windows PC or a TV.</p>
  <div class="gallery">
   <div class="tvcol">
-   <figure><img src="img/tv-code.webp" width="1280" height="720" loading="lazy" alt="TV screen waiting for the phone, with a field to enter the Wi-Fi Direct code"><figcaption>TV: waiting for your phone, with the Wi-Fi Direct code.</figcaption></figure>
+   <figure><img src="img/windows.webp" width="520" height="837" loading="lazy" alt="Flowshare for Windows, connected to the phone by USB"><figcaption>Windows: online through your phone by USB (in development).</figcaption></figure>
   </div>
-  <figure class="phonefig"><img src="img/phone-sharing.webp" width="520" height="1127" loading="lazy" alt="Phone sharing screen with connection mode and the TV code"><figcaption>Phone: sharing, with mode and TV code.</figcaption></figure>
-  <figure class="phonefig"><img src="img/phone-receive.webp" width="520" height="1127" loading="lazy" alt="Phone in receive mode, getting online through another phone"><figcaption>Receive on a tablet or second phone too.</figcaption></figure>
+  <figure class="phonefig"><img src="img/phone-sharing.webp" width="520" height="1127" loading="lazy" alt="Phone sharing screen with connection mode and pairing code"><figcaption>Phone: sharing, with mode and TV code.</figcaption></figure>
+  <figure class="phonefig"><img src="img/phone-receive.webp" width="520" height="1127" loading="lazy" alt="Phone in receive mode, getting online through another phone"><figcaption>A second phone or tablet, online through the first.</figcaption></figure>
  </div>
 </div></section>
 
