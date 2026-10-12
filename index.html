@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flowshare</title>
+<meta name="description" content="Share your Android phone&#x27;s mobile internet with another Android phone, tablet or TV, or a Windows PC, over USB or Wi-Fi Direct. Tuned for smooth cloud gaming. No accounts, no ads, no VPN server.">
+<meta name="theme-color" content="#0A0E17">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml"><meta property="og:title" content="Flowshare: your phone&#x27;s internet on your TV"><meta property="og:description" content="Share your Android phone&#x27;s mobile internet with another Android phone, tablet or TV, or a Windows PC, over USB or Wi-Fi Direct. Tuned for smooth cloud gaming. No accounts, no ads, no VPN server."><meta property="og:type" content="website"><meta property="og:image" content="https://homelessharper1991-blip.github.io/img/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0E17;--bg2:#0F1B30;--card:#111A2B;--card2:#16223A;--line:#22304A;--text:#E8EEF7;--muted:#9AA8BE;--teal:#2EE6C5;--teal2:#14B8A6;--warn:#FFB547;--radius:18px;--max:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);background-image:radial-gradient(1200px 600px at 80% -10%,rgba(46,230,197,.10),transparent 60%),linear-gradient(180deg,var(--bg2) 0,var(--bg) 900px);background-repeat:no-repeat;color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--teal)}
+a:hover{color:#7ff3dd}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--teal);color:#04201b;padding:8px 14px;border-radius:8px;z-index:10;font-weight:600}
+.skip:focus{left:8px}
+header.top{position:sticky;top:0;z-index:5;background:rgba(10,14,23,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(34,48,74,.6)}
+header.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.brand img{width:34px;height:34px}
+nav.links{margin-left:auto;display:flex;gap:22px;align-items:center}
+nav.links a{color:var(--muted);text-decoration:none;font-size:15px}
+nav.links a:hover,nav.links a[aria-current=page]{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid transparent;font-size:16px;line-height:1.2}
+.btn.primary{background:var(--teal);color:#03211C}
+.btn.primary:hover{background:#5ef0d6;color:#03211C}
+.btn.ghost{border-color:var(--line);color:var(--text);background:rgba(22,34,58,.5)}
+.btn.ghost:hover{border-color:var(--teal);color:var(--text)}
+.btn.small{padding:8px 16px;font-size:14px}
+nav.links .btn.primary{color:#03211C}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(36px,5.4vw,58px);line-height:1.06;letter-spacing:-.03em;margin:0 0 18px}
+h1 .grad{background:linear-gradient(90deg,#fff 0,var(--teal) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);margin:0 0 28px;max-width:34em}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:var(--muted);font-size:14px;padding:0;list-style:none}
+.trust li::before{content:"\2713";color:var(--teal);margin-right:6px;font-weight:700}
+.shots{position:relative;padding-bottom:70px;margin-right:18px}
+.shots .tv{border-radius:14px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 8px #0b111c}
+.shots .phone{position:absolute;right:-18px;bottom:-8px;width:25%;border-radius:20px;border:6px solid #0b111c;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+section{padding:72px 0}
+section.alt{background:linear-gradient(180deg,rgba(15,27,48,.55),rgba(15,27,48,0))}
+h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.02em;line-height:1.15;margin:0 0 12px}
+.sub{color:var(--muted);max-width:40em;margin:0 0 40px;font-size:18px}
+h3{font-size:19px;margin:0 0 8px;letter-spacing:-.01em}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card p{color:var(--muted);margin:0}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(46,230,197,.12);color:var(--teal);margin-bottom:16px}
+.ico svg{width:24px;height:24px}
+.step{position:relative;padding-top:58px}
+.step .n{position:absolute;top:22px;left:26px;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#03211C;font-weight:700;display:grid;place-items:center;font-size:15px}
+.flow{margin:0 0 36px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.flow svg{width:100%;height:auto;display:block}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;align-items:start}
+.gallery figure{margin:0}
+.gallery img{border-radius:14px;border:1px solid var(--line)}
+.gallery figcaption{color:var(--muted);font-size:14px;margin-top:10px}
+.gallery .tvcol{display:grid;gap:20px}
+.price{display:flex;flex-direction:column}
+.price .amt{font-size:44px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px}
+.price .amt small{font-size:16px;color:var(--muted);font-weight:500}
+.price ul{list-style:none;padding:0;margin:18px 0 0;color:var(--text)}
+.price li{padding:7px 0 7px 28px;position:relative;border-top:1px solid rgba(34,48,74,.6)}
+.price li::before{content:"";position:absolute;left:2px;top:14px;width:12px;height:7px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.price.pro{border-color:var(--teal);background:linear-gradient(180deg,rgba(46,230,197,.10),var(--card) 60%)}
+.badge{display:inline-block;background:rgba(46,230,197,.14);color:var(--teal);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}
+.note{color:var(--muted);font-size:14px;margin-top:18px}
+.dl{display:flex;flex-direction:column;gap:14px}
+.dl .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.play{display:inline-flex;align-items:center;gap:10px;background:#000;border:1px solid #555;color:#fff;border-radius:10px;padding:8px 16px;text-decoration:none;opacity:.6;cursor:not-allowed}
+.play small{display:block;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.play b{display:block;font-size:17px;line-height:1.1}
+.warn{border:1px solid rgba(255,181,71,.45);background:rgba(255,181,71,.07);border-radius:14px;padding:16px 18px;color:#F3DDB7;font-size:15px;margin-top:22px}
+.warn strong{color:var(--warn)}
+.exp{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.exp .card{padding:20px}
+.exp h3{display:flex;align-items:center;gap:8px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);border:1px solid rgba(255,181,71,.5);border-radius:6px;padding:1px 6px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 20px;margin-bottom:12px}
+details[open]{border-color:#2c3f60}
+summary{cursor:pointer;padding:18px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--teal);font-size:22px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p,details ul{color:var(--muted);margin:0 0 18px}
+footer{border-top:1px solid var(--line);padding:40px 0 48px;color:var(--muted);font-size:14px;margin-top:40px}
+footer .cols{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer nav a{color:var(--muted);text-decoration:none}
+footer nav a:hover{color:var(--text)}
+footer .disc{max-width:60em;margin-top:22px;font-size:13px;line-height:1.6}
+.doc{max-width:820px;padding-top:48px}
+.doc h1{font-size:clamp(32px,4vw,44px)}
+.doc h2{font-size:24px;margin:40px 0 10px}
+.doc h3{margin-top:24px}
+.doc p,.doc li{color:#C9D3E3}
+.doc strong{color:var(--text)}
+.doc table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.doc th,.doc td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{color:var(--text);background:var(--card)}
+.doc td{color:#C9D3E3}
+.tablewrap{overflow-x:auto}
+.doc code{background:var(--card2);padding:1px 6px;border-radius:6px;font-size:.92em}
+.contact{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:22px 0}
+@media (max-width:900px){
+ .hero .wrap{grid-template-columns:1fr}
+ .grid3,.exp{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr}
+ .gallery .tvcol{grid-column:1/-1}
+ nav.links a:not(.btn){display:none}
+}
+@media (max-width:600px){
+ .grid3,.grid2,.exp,.gallery{grid-template-columns:1fr}
+ .gallery .phonefig{max-width:300px;margin:0 auto}
+ section{padding:56px 0}
+ .hero{padding:44px 0 32px}
+ .wrap{padding:0 16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+ <a class="brand" href="index.html"><img src="img/icon.svg" alt="" width="34" height="34">Flowshare</a>
+ <nav class="links" aria-label="Main">
+  <a href="index.html#how">How it works</a><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a>
+  <a href="support.html">Support</a>
+  <a class="btn primary small" href="index.html#get">Coming to Google Play</a>
+ </nav>
+</div></header>
+<main id="main">
+
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="eyebrow">Android to Android &middot; Android to Windows</span>
+  <h1>Your phone's internet, <span class="grad">on every screen you own.</span></h1>
+  <p class="lead">Flowshare shares your Android phone's mobile internet with another Android phone or tablet, a Windows PC, or a Google TV, over a USB cable or Wi-Fi Direct. Tuned for lag-free cloud gaming and streaming. Plug in, and it just connects.</p>
+  <div class="cta">
+   <a class="btn primary" href="#get">Coming soon on Google Play</a>
+   <a class="btn ghost" href="#how">See how it works</a>
+  </div>
+  <ul class="trust"><li>No accounts</li><li>No ads</li><li>No VPN server</li><li>Free to try</li></ul>
+ </div>
+ <div class="shots">
+  <img class="tv" src="img/tv-connected.webp" width="1280" height="720" alt="Flowshare on a TV, showing Connected to your phone by Wi-Fi Direct with Automatic mode selected">
+  <img class="phone" src="img/phone-sharing.webp" width="520" height="1127" alt="Flowshare on a phone, waiting for the TV with Automatic mode and an 8-digit code for the TV" loading="lazy">
+ </div>
+</div></section>
+
+<section id="how" class="alt"><div class="wrap">
+ <span class="eyebrow">How it works</span>
+ <h2>Three steps. Then it's automatic.</h2>
+ <p class="sub">One app does both jobs: install Flowshare on your phone and on your TV. The phone shares, the TV receives.</p>
+ <div class="flow"><svg viewBox="0 0 920 230" role="img" aria-labelledby="flowt">
+<title id="flowt">Mobile network to phone running Flowshare, then by USB cable or Wi-Fi Direct to the TV</title>
+<defs><linearGradient id="lk" x1="0" x2="1"><stop offset="0" stop-color="#2EE6C5"/><stop offset="1" stop-color="#14B8A6"/></linearGradient></defs>
+<g font-family="Inter,system-ui,sans-serif" text-anchor="middle">
+ <g transform="translate(80,100)">
+  <path d="M-30 20a42 42 0 0 1 60 0M-44 6a62 62 0 0 1 88 0M-16 34a20 20 0 0 1 32 0" fill="none" stroke="#9AA8BE" stroke-width="5" stroke-linecap="round" transform="translate(0,-34)"/>
+  <circle cy="10" r="5" fill="#9AA8BE"/>
+  <text y="62" fill="#E8EEF7" font-size="17" font-weight="600">5G / 4G</text>
+  <text y="84" fill="#9AA8BE" font-size="14">your mobile plan</text>
+ </g>
+ <path d="M150 100H300" stroke="#22304A" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+ <g transform="translate(360,100)">
+  <rect x="-34" y="-62" width="68" height="118" rx="12" fill="#111A2B" stroke="#2EE6C5" stroke-width="3"/>
+  <rect x="-20" y="-40" width="40" height="40" rx="9" fill="#0D5A86"/>
+  <path d="M-12 -28c6 0 7 8 13 8h7M-12 -12c6 0 7 -8 13 -8M4 -25l4.5 5-4.5 5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text y="82" fill="#E8EEF7" font-size="17" font-weight="600">Phone</text>
+  <text y="102" fill="#9AA8BE" font-size="14">shares its internet</text>
+ </g>
+ <path d="M410 82C500 82 520 82 600 82" stroke="url(#lk)" stroke-width="6" fill="none" stroke-linecap="round"/>
+ <text x="505" y="66" fill="#2EE6C5" font-size="15" font-weight="600">USB cable</text>
+ <path d="M410 122C500 122 520 122 600 122" stroke="#2EE6C5" stroke-opacity=".55" stroke-width="4" stroke-dasharray="10 9" fill="none" stroke-linecap="round"/>
+ <text x="505" y="150" fill="#9AA8BE" font-size="15">or Wi-Fi Direct</text>
+ <g transform="translate(730,96)">
+  <rect x="-110" y="-62" width="220" height="128" rx="12" fill="#111A2B" stroke="#E8EEF7" stroke-width="3"/>
+  <path d="M-30 78h60" stroke="#E8EEF7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M-12 -12l26 14-26 14z" fill="#2EE6C5"/>
+  <text y="104" fill="#E8EEF7" font-size="17" font-weight="600">Google TV</text>
+ </g>
+</g></svg></div>
+ <div class="grid3">
+  <div class="card step"><span class="n">1</span><h3>Install on both</h3><p>Put Flowshare on your Android phone and on your Google TV or Android TV (also works with a tablet or a second phone).</p></div>
+  <div class="card step"><span class="n">2</span><h3>Start sharing on the phone</h3><p>Open Flowshare on the phone and tap <strong>Start sharing</strong>. It shows a code for your TV.</p></div>
+  <div class="card step"><span class="n">3</span><h3>Plug in or enter the code</h3><p>Connect a USB data cable from the TV to the phone, or type the code on the TV for Wi-Fi Direct. Next time, it connects by itself.</p></div>
+ </div>
+</div></section>
+
+<section id="features"><div class="wrap">
+ <span class="eyebrow">Features</span>
+ <h2>Built for cloud gaming. Great for everything else.</h2>
+ <p class="sub">Game streams have almost no buffer, so every millisecond of jitter shows. Flowshare is designed around that.</p>
+ <div class="grid3">
+  <div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="14" r="1"/></svg></div><h3>Game traffic goes first</h3><p>Cloud games like GeForce NOW and Xbox Cloud Gaming get priority over downloads, with an optional game list, reserved bandwidth and a priority buffer.</p></div>
+  <div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M9 5h6"/><rect x="8" y="8" width="8" height="6" rx="1"/><path d="M12 14v8"/><path d="M4 18a10 10 0 0 1 0-6M20 12a10 10 0 0 1 0 6"/></svg></div><h3>USB or Wi-Fi Direct, automatically</h3><p>Automatic mode uses the cable when it's plugged in and switches to Wi-Fi Direct when it isn't. No router needed.</p></div>
+  <div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8"/><path d="M6.3 7.3a8 8 0 1 0 11.4 0"/></svg></div><h3>Starts by itself</h3><p>Turn on the TV or plug in the phone and Flowshare reconnects on its own. No buttons to press.</p></div>
+  <div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Low-latency engine</h3><p>A native networking core keeps the phone's modem awake, avoids batching delays and charges the phone over USB while it shares.</p></div>
+  <div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/></svg></div><h3>Know your signal</h3><p>See 5G or 4G, signal strength, latency and live speed, plus tips when your signal, not your setup, is the problem.</p></div>
+  <div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Private by design</h3><p>The tunnel runs entirely on your devices. Your traffic never goes to us. No accounts, no ads, no analytics SDKs.</p></div>
+ </div>
+</div></section>
+
+<section class="alt" aria-labelledby="screens-h"><div class="wrap">
+ <span class="eyebrow">Screens</span>
+ <h2 id="screens-h">Simple on the TV. Clear on the phone.</h2>
+ <p class="sub">Big, readable status on the TV for the remote, and everything you need on the phone.</p>
+ <div class="gallery">
+  <div class="tvcol">
+   <figure><img src="img/tv-code.webp" width="1280" height="720" loading="lazy" alt="TV screen waiting for the phone, with a field to enter the Wi-Fi Direct code"><figcaption>TV: waiting for your phone, with the Wi-Fi Direct code.</figcaption></figure>
+  </div>
+  <figure class="phonefig"><img src="img/phone-sharing.webp" width="520" height="1127" loading="lazy" alt="Phone sharing screen with connection mode and the TV code"><figcaption>Phone: sharing, with mode and TV code.</figcaption></figure>
+  <figure class="phonefig"><img src="img/phone-receive.webp" width="520" height="1127" loading="lazy" alt="Phone in receive mode, getting online through another phone"><figcaption>Receive on a tablet or second phone too.</figcaption></figure>
+ </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+ <span class="eyebrow">Pricing</span>
+ <h2>Free to use. One price to unlock.</h2>
+ <p class="sub">No subscription. Try Pro free for 24 hours, then decide.</p>
+ <div class="grid2">
+  <div class="card price">
+   <h3>Free</h3>
+   <div class="amt">$0</div>
+   <p>Everything you need to try Flowshare.</p>
+   <ul>
+    <li>2 hours of full speed every 6 hours</li>
+    <li>Then up to 20 Mbps (enough for HD video)</li>
+    <li>USB and Wi-Fi Direct, automatic mode</li>
+    <li>Game priority and all settings</li>
+   </ul>
+  </div>
+  <div class="card price pro">
+   <h3>Pro</h3>
+   <div class="amt">$9.99 <small>one time</small></div>
+   <p>Unlimited full speed, forever.</p>
+   <ul>
+    <li>Full speed all the time, no limit</li>
+    <li>Pay once, no subscription</li>
+    <li>Restores on your other devices with the same Google account</li>
+    <li>Supports an independent developer</li>
+   </ul>
+  </div>
+ </div>
+ <p class="note">Plans apply to the Google Play version; Pro is bought inside the app through Google Play. Prices in US dollars; local prices may vary.</p>
+</div></section>
+
+<section id="get" class="alt"><div class="wrap" style="text-align:center">
+ <span class="eyebrow">Coming soon</span>
+ <h2>Flowshare is coming to Google Play</h2>
+ <p class="sub" style="margin-inline:auto">One app for Android phones, tablets and TVs (Android 10 or newer), launching on Google Play soon. The Windows app is in development.</p>
+ <div class="row" style="justify-content:center;margin-top:24px"><span class="play" role="img" aria-label="Coming soon on Google Play"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><path d="M1 1l12 11L1 23z" fill="#2EE6C5"/><path d="M1 1l16 9-4 2z" fill="#14B8A6"/><path d="M1 23l16-9-4-2z" fill="#0D5A86"/><path d="M17 10l4 2-4 2-4-2z" fill="#FFB547"/></svg><span><small>Coming soon on</small><b>Google Play</b></span></span></div>
+ <p class="note" style="margin-top:28px">Windows is next; Mac and router versions are in development.</p>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:860px">
+ <span class="eyebrow">FAQ</span>
+ <h2>Questions</h2>
+ <div style="margin-top:28px">
+ <details><summary>What do I need?</summary><p>An Android phone with mobile data, and a Google TV or Android TV running Android 10 or newer (a tablet or second phone also works as the receiver). For USB mode, a USB <em>data</em> cable from the TV's USB port to the phone. Charge-only cables won't work. A powered USB hub helps keep the phone charged.</p></details>
+ <details><summary>Does it use my mobile data?</summary><p>Yes. Everything the TV does goes over your phone's mobile connection and counts toward your plan. Cloud gaming in HD can use several GB per hour. Check your plan's data allowance and terms before you use Flowshare.</p></details>
+ <details><summary>Is this allowed by my carrier?</summary><p>That depends on your plan. Some plans limit how a phone's connection can be shared. You are responsible for following your carrier's terms. Flowshare does not change what your plan allows.</p></details>
+ <details><summary>Is Flowshare a VPN? Does my traffic go through your servers?</summary><p>No. On the TV, Flowshare uses Android's VPN feature only to create a local tunnel to your phone over the cable or Wi-Fi Direct. There is no Flowshare server. Your traffic goes from the TV to your phone and straight to the internet. We never see it.</p></details>
+ <details><summary>USB or Wi-Fi Direct: which is better?</summary><p>USB is the smoothest and lowest-latency, and it charges the phone. Wi-Fi Direct needs no cable and is great for video. Automatic mode uses USB when plugged in and Wi-Fi Direct otherwise.</p></details>
+ <details><summary>Which games work?</summary><p>Cloud gaming services such as GeForce NOW and Xbox Cloud Gaming. Game traffic is recognized and sent first. Results depend on your mobile signal. Moving the phone toward a window helps more than anything else.</p></details>
+ <details><summary>Why does it ask for location or nearby devices?</summary><p>Android requires the "Nearby devices" permission (or location on Android 12 and older) for any app that uses Wi-Fi Direct. Flowshare never reads or stores your location.</p></details>
+ <details><summary>I bought Pro. How do I get it on a new device?</summary><p>Install Flowshare from Google Play with the same Google account and open Settings &rarr; Restore purchase.</p></details>
+ <details><summary>What data does Flowshare collect?</summary><p>None by default on Google Play. If you turn on diagnostics, connection statistics (speed, signal, latency, device model, app version) are sent to help fix stutters. See the <a href="privacy.html">privacy policy</a>.</p></details>
+ </div>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+ <div class="cols">
+  <a class="brand" href="index.html"><img src="img/icon.svg" alt="" width="28" height="28">Flowshare</a>
+  <nav aria-label="Footer"><a href="index.html#get">Google Play</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+ </div>
+ <p class="disc">Flowshare connects your devices to your own phone's mobile internet; data used counts toward your plan. You are responsible for following your mobile carrier's terms of service. The router, Windows and Mac versions are experimental and may not work on every device. Google Play and Google TV are trademarks of Google LLC. GeForce NOW is a trademark of NVIDIA; Xbox Cloud Gaming is a trademark of Microsoft. Flowshare is not affiliated with them.</p>
+ <p class="disc">&copy; 2026 Flowshare. Contact: our support email (available at launch)</p>
+</div></footer>
+</body>
+</html>
